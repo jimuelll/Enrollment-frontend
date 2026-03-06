@@ -28,22 +28,6 @@ function getUsers() {
 
 //POST API
 submit.addEventListener("click", () => {
-  if (fullName === "") {
-    alert("Full Name must be filled out");
-    event.preventDefault();
-  }
-  if (course === "") {
-    alert("Course must be filled out");
-    event.preventDefault();
-  }
-  if (yearLevel === "") {
-    alert("Year Level must be filled out");
-    event.preventDefault();
-  }
-  if (email === "") {
-    alert("Email must be filled out");
-    event.preventDefault();
-  }
   const student = {
     fullName: document.querySelector("#fullName").value,
     course: document.querySelector("#course").value,
