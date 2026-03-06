@@ -17,7 +17,7 @@ function getUsers() {
     .then((data) => {
       console.log(data);
       data.forEach((element) => {
-        html += `<li>${element.id} - ${element.fullName} - ${element.course} - ${element.yearLevel} - ${element.email} - ${element.createdAt}</li>`;
+        html += `<li>${element.id} - ${element.fullName} - ${element.course} - ${element.yearLevel} - ${element.email} - ${element.dateEnrolled}</li>`;
       });
       content.innerHTML = html;
     })
@@ -44,4 +44,5 @@ submit.addEventListener("click", () => {
   alert("Student enrolled successfully");
   location.reload();
 });
+
 
