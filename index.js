@@ -17,7 +17,7 @@ function getUsers() {
     .then((data) => {
       console.log(data);
       data.forEach((element) => {
-        html += `<li>${element.id} - ${element.fullName} - ${element.course} - Year Level:${element.yearLevel} - ${element.email} - ${element.dateEnrolled}</li>`;
+        html += `<li>${element.id} - ${element.fullName} - ${element.course} - ${element.yearLevel} - ${element.email} - ${element.createdAt}</li>`;
       });
       content.innerHTML = html;
     })
@@ -28,6 +28,22 @@ function getUsers() {
 
 //POST API
 submit.addEventListener("click", () => {
+  if (fullName === "") {
+    alert("Full Name must be filled out");
+    event.preventDefault();
+  }
+  if (course === "") {
+    alert("Course must be filled out");
+    event.preventDefault();
+  }
+  if (yearLevel === "") {
+    alert("Year Level must be filled out");
+    event.preventDefault();
+  }
+  if (email === "") {
+    alert("Email must be filled out");
+    event.preventDefault();
+  }
   const student = {
     fullName: document.querySelector("#fullName").value,
     course: document.querySelector("#course").value,
@@ -44,6 +60,3 @@ submit.addEventListener("click", () => {
   alert("Student enrolled successfully");
   location.reload();
 });
-
-
-
