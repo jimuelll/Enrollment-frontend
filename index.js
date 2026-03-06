@@ -27,7 +27,7 @@ function getUsers() {
 }
 
 //POST API
-submit.addEventListener("onclick", () => {
+submit.addEventListener("onsubmit", () => {
   const student = {
     fullName: document.querySelector("#fullName").value,
     course: document.querySelector("#course").value,
@@ -44,5 +44,6 @@ submit.addEventListener("onclick", () => {
   alert("Student enrolled successfully");
   location.reload();
 });
+
 
 
