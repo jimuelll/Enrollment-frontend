@@ -17,7 +17,7 @@ function getUsers() {
     .then((data) => {
       console.log(data);
       data.forEach((element) => {
-        html += `<li>${element.id} - ${element.fullName} - ${element.course} - ${element.yearLevel} - ${element.email} - ${element.createdAt}</li>`;
+        html += `<li>$${element.id} - ${element.fullName} - ${element.course} - ${element.yearLevel} - ${element.email} - ${element.createdAt}</li>`;
       });
       content.innerHTML = html;
     })
@@ -27,7 +27,7 @@ function getUsers() {
 }
 
 //POST API
-submit.addEventListener("onSubmit", () => {
+submit.addEventListener("onclick", () => {
   const student = {
     fullName: document.querySelector("#fullName").value,
     course: document.querySelector("#course").value,
