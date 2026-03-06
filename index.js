@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
 function getUsers() {
   let html = "";
   //FETCH API
-  fetch("http://localhost:7000/api/enrollments", {
+  fetch("https://enrollment-1-e9pe.onrender.com/api/enrollments", {
     mode: "cors",
   })
     .then((response) => {
@@ -34,7 +34,7 @@ submit.addEventListener("click", () => {
     yearLevel: document.querySelector("#yearLevel").value,
     email: document.querySelector("#email").value,
   };
-  fetch("http://localhost:7000/api/enrollments", {
+  fetch("https://enrollment-1-e9pe.onrender.com/api/enrollments", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(student),
@@ -44,3 +44,4 @@ submit.addEventListener("click", () => {
   alert("Student enrolled successfully");
   location.reload();
 });
+
